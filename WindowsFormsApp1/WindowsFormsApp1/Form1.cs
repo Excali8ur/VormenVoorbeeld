@@ -19,10 +19,7 @@ namespace WindowsFormsApp1
 
         private void Knopje_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Github experts");
-            Console.ReadLine();
+            Tekstvak.Text = "Github experts";
         }
-
-        
     }
 }

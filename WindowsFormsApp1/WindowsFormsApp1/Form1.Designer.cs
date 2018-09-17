@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Vlakje = new System.Windows.Forms.Panel();
+            this.Knopje = new System.Windows.Forms.Button();
+            this.Tekstvak = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Vlakje
@@ -38,12 +40,6 @@
             this.Vlakje.Name = "Vlakje";
             this.Vlakje.Size = new System.Drawing.Size(405, 379);
             this.Vlakje.TabIndex = 0;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.Knopje = new System.Windows.Forms.Button();
-            this.SuspendLayout();
             // 
             // Knopje
             // 
@@ -55,17 +51,25 @@
             this.Knopje.UseVisualStyleBackColor = true;
             this.Knopje.Click += new System.EventHandler(this.Knopje_Click);
             // 
+            // Tekstvak
+            // 
+            this.Tekstvak.Location = new System.Drawing.Point(552, 54);
+            this.Tekstvak.Name = "Tekstvak";
+            this.Tekstvak.Size = new System.Drawing.Size(185, 20);
+            this.Tekstvak.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Tekstvak);
             this.Controls.Add(this.Vlakje);
-            this.Name = "Form1";
             this.Controls.Add(this.Knopje);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -74,6 +78,7 @@
         private System.Windows.Forms.Panel Vlakje;
 
         private System.Windows.Forms.Button Knopje;
+        private System.Windows.Forms.TextBox Tekstvak;
     }
 }
 
