@@ -23,6 +23,9 @@ namespace WindowsFormsApp1
             Console.ReadLine();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Test");
+        }
     }
 }
