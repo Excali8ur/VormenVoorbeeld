@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void Vlakje_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }
