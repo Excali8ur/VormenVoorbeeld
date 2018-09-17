@@ -17,6 +17,14 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void Knopje_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Github experts");
+            Console.ReadLine();
+        }
+
+        
+
         private void Vlakje_Paint(object sender, PaintEventArgs e)
         {
             
