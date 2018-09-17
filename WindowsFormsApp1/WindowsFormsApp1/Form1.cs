@@ -21,5 +21,16 @@ namespace WindowsFormsApp1
         {
             Tekstvak.Text = "Github experts";
         }
+
+        
+
+        private void Vlakje_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Test");
+        }
     }
 }
