@@ -40,6 +40,7 @@
             this.Vlakje.Name = "Vlakje";
             this.Vlakje.Size = new System.Drawing.Size(405, 379);
             this.Vlakje.TabIndex = 0;
+            this.Vlakje.Paint += new System.Windows.Forms.PaintEventHandler(this.Vlakje_Paint);
             // 
             // Knopje
             // 

@@ -23,6 +23,12 @@ namespace WindowsFormsApp1
             Console.ReadLine();
         }
 
+        
+
+        private void Vlakje_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Test");
