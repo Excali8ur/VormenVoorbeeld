@@ -12,9 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private List<Vorm> vormen;
+        Graphics papier;
+
         public Form1()
         {
             InitializeComponent();
+            vormen = new List<Vorm>();
+
+            papier = Vlakje.CreateGraphics();
         }
 
         private void Knopje_Click(object sender, EventArgs e)
@@ -31,6 +37,24 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Test");
+        }
+
+        private void btnMaakRechthoek_Click(object sender, EventArgs e)
+        {
+            //Nu een vaste plaats en kleur -> Aanpassen zodat dit gekozen kan worden
+            Rechthoek rh = new Rechthoek(10,10,Color.Blue);
+
+            //Na het aanmaken van een nieuwe vorm: teken alles
+            Tekenen();
+        }
+
+        private void Tekenen()
+        {
+            
+            foreach (Vorm v in vormen)
+            {
+                v.Tekenen(papier);
+            }
         }
     }
 }
