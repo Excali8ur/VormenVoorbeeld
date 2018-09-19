@@ -31,6 +31,7 @@
             this.Vlakje = new System.Windows.Forms.Panel();
             this.Knopje = new System.Windows.Forms.Button();
             this.Tekstvak = new System.Windows.Forms.TextBox();
+            this.btnMaakRechthoek = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Vlakje
@@ -59,11 +60,22 @@
             this.Tekstvak.Size = new System.Drawing.Size(185, 20);
             this.Tekstvak.TabIndex = 0;
             // 
+            // btnMaakRechthoek
+            // 
+            this.btnMaakRechthoek.Location = new System.Drawing.Point(662, 341);
+            this.btnMaakRechthoek.Name = "btnMaakRechthoek";
+            this.btnMaakRechthoek.Size = new System.Drawing.Size(123, 65);
+            this.btnMaakRechthoek.TabIndex = 1;
+            this.btnMaakRechthoek.Text = "Maak Rechthoek";
+            this.btnMaakRechthoek.UseVisualStyleBackColor = true;
+            this.btnMaakRechthoek.Click += new System.EventHandler(this.btnMaakRechthoek_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMaakRechthoek);
             this.Controls.Add(this.Tekstvak);
             this.Controls.Add(this.Vlakje);
             this.Controls.Add(this.Knopje);
@@ -80,6 +92,7 @@
 
         private System.Windows.Forms.Button Knopje;
         private System.Windows.Forms.TextBox Tekstvak;
+        private System.Windows.Forms.Button btnMaakRechthoek;
     }
 }
 
