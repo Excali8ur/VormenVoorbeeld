@@ -4,14 +4,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 namespace WindowsFormsApp1
 {
     public class Rechthoek: Vorm
-    {
-        public Rechthoek(int x, int y, Color kleur): base(x, y, kleur)
+    {         
+        public Rechthoek(int x, int y, Color kleur): base()
         {
+            xCoord = x;
+            yCoord = y;
+            this.kleur = kleur;
 
         }
 
@@ -27,7 +29,8 @@ namespace WindowsFormsApp1
 
         public override void Tekenen(Graphics papier)
         {
-            throw new NotImplementedException();
+            SolidBrush SB = new SolidBrush(Color.Red);
+            papier.DrawEllipse(xCoord - 50, yCoord - 50, 100, 100);
         }
     }
 }

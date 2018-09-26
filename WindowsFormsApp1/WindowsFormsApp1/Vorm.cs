@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 
 namespace WindowsFormsApp1
@@ -22,6 +21,10 @@ namespace WindowsFormsApp1
             xCoord = x;
             yCoord = y;
             this.kleur = kleur;
+        }
+
+        protected Vorm()
+        {
         }
 
         /// <summary>

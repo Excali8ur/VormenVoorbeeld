@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 namespace WindowsFormsApp1
 {
@@ -12,11 +11,13 @@ namespace WindowsFormsApp1
     {
         public Cirkel(int x, int y, Color kleur) : base(x, y, kleur)
         {
-
+            x = 50;
+            y = 50;
         }
         public override void Groeien()
         {
             throw new NotImplementedException();
+            
         }
 
         public override void Krimpen()
