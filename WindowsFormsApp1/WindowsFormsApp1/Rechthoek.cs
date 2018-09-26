@@ -29,8 +29,10 @@ namespace WindowsFormsApp1
 
         public override void Tekenen(Graphics papier)
         {
-            SolidBrush SB = new SolidBrush(Color.Red);
-            papier.DrawEllipse(xCoord - 50, yCoord - 50, 100, 100);
+            SolidBrush SB = new SolidBrush(kleur);
+            Pen p = new Pen(kleur);
+            papier.DrawRectangle(p, xCoord - 50, yCoord - 50, 100, 100);
+            papier.FillRectangle(SB, xCoord - 50, yCoord - 50, 100, 100);
         }
     }
 }

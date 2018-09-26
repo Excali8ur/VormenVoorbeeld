@@ -14,8 +14,7 @@ namespace WindowsFormsApp1
     {
         private List<Vorm> vormen;
         Graphics papier;
-        private int x;
-        private int y;
+        Color kleur;
 
         public Form1()
         {
@@ -43,8 +42,9 @@ namespace WindowsFormsApp1
 
         private void btnMaakRechthoek_Click(object sender, EventArgs e)
         {
+            int x = Convert.ToInt32(tbXcoord.Text);
             //Nu een vaste plaats en kleur -> Aanpassen zodat dit gekozen kan worden
-            Rechthoek rh = new Rechthoek(10, 10, Color.Blue);
+            Rechthoek rh = new Rechthoek(x, 10, kleur);
             vormen.Add(rh);
 
             //Na het aanmaken van een nieuwe vorm: teken alles
@@ -60,6 +60,12 @@ namespace WindowsFormsApp1
             {
                 v.Tekenen(papier);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            kleur = colorDialog1.Color;
         }
     }
 }
