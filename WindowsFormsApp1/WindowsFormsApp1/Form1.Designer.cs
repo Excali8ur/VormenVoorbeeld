@@ -103,9 +103,9 @@
             // 
             // btnMaakCirkel
             // 
-            this.btnMaakCirkel.Location = new System.Drawing.Point(662, 283);
+            this.btnMaakCirkel.Location = new System.Drawing.Point(662, 273);
             this.btnMaakCirkel.Name = "btnMaakCirkel";
-            this.btnMaakCirkel.Size = new System.Drawing.Size(123, 52);
+            this.btnMaakCirkel.Size = new System.Drawing.Size(123, 62);
             this.btnMaakCirkel.TabIndex = 5;
             this.btnMaakCirkel.Text = "Maak Cirkel";
             this.btnMaakCirkel.UseVisualStyleBackColor = true;

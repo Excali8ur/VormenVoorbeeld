@@ -52,6 +52,16 @@ namespace WindowsFormsApp1
             
         }
 
+        private void btnMaakCirkel_Click(object sender, EventArgs e)
+        {
+            // Nieuw object aanmaken Cirkel
+            Cirkel C = new Cirkel(50, 50, kleur);
+            // object Cirkel in vormen opnemen
+            vormen.Add(C);
+            // Na het aanmaken van een nieuwe vorm: teken alles
+            Tekenen();
+        }
+
         private void Tekenen()
         {
             
@@ -67,14 +77,6 @@ namespace WindowsFormsApp1
             kleur = colorDialog1.Color;
         }
 
-        private void btnMaakCirkel_Click(object sender, EventArgs e)
-        {
-            // Nieuw object aanmaken Cirkel
-            Cirkel C = new Cirkel(50, 50, kleur);
-            // object Cirkel in vormen opnemen
-            vormen.Add(C);
-            // Na het aanmaken van een nieuwe vorm: teken alles
-            Tekenen();
-        }
+        
     }
 }
