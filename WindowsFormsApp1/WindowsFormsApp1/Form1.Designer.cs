@@ -32,17 +32,24 @@
             this.Knopje = new System.Windows.Forms.Button();
             this.Tekstvak = new System.Windows.Forms.TextBox();
             this.btnMaakRechthoek = new System.Windows.Forms.Button();
-            this.tbXcoord = new System.Windows.Forms.TextBox();
+            this.tbXcoordRh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.btnMaakCirkel = new System.Windows.Forms.Button();
+            this.tbYcoordRh = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbXcoordC = new System.Windows.Forms.TextBox();
+            this.tbYcoordC = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Vlakje
             // 
             this.Vlakje.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Vlakje.Location = new System.Drawing.Point(38, 27);
+            this.Vlakje.Location = new System.Drawing.Point(18, 27);
             this.Vlakje.Name = "Vlakje";
             this.Vlakje.Size = new System.Drawing.Size(405, 379);
             this.Vlakje.TabIndex = 0;
@@ -75,25 +82,27 @@
             this.btnMaakRechthoek.UseVisualStyleBackColor = true;
             this.btnMaakRechthoek.Click += new System.EventHandler(this.btnMaakRechthoek_Click);
             // 
-            // tbXcoord
+            // tbXcoordRh
             // 
-            this.tbXcoord.Location = new System.Drawing.Point(471, 211);
-            this.tbXcoord.Name = "tbXcoord";
-            this.tbXcoord.Size = new System.Drawing.Size(100, 20);
-            this.tbXcoord.TabIndex = 2;
+            this.tbXcoordRh.Location = new System.Drawing.Point(552, 376);
+            this.tbXcoordRh.Name = "tbXcoordRh";
+            this.tbXcoordRh.Size = new System.Drawing.Size(100, 20);
+            this.tbXcoordRh.TabIndex = 2;
+            this.tbXcoordRh.TextChanged += new System.EventHandler(this.tbXcoord_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(471, 192);
+            this.label1.Location = new System.Drawing.Point(449, 383);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "x coord";
+            this.label1.Text = "x coord Rechthoek";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(474, 361);
+            this.button1.Location = new System.Drawing.Point(662, 136);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -111,15 +120,71 @@
             this.btnMaakCirkel.UseVisualStyleBackColor = true;
             this.btnMaakCirkel.Click += new System.EventHandler(this.btnMaakCirkel_Click);
             // 
+            // tbYcoordRh
+            // 
+            this.tbYcoordRh.Location = new System.Drawing.Point(552, 350);
+            this.tbYcoordRh.Name = "tbYcoordRh";
+            this.tbYcoordRh.Size = new System.Drawing.Size(100, 20);
+            this.tbYcoordRh.TabIndex = 6;
+            this.tbYcoordRh.TextChanged += new System.EventHandler(this.tbYcoord_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(449, 357);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "y coord Rechthoek";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // tbXcoordC
+            // 
+            this.tbXcoordC.Location = new System.Drawing.Point(552, 308);
+            this.tbXcoordC.Name = "tbXcoordC";
+            this.tbXcoordC.Size = new System.Drawing.Size(100, 20);
+            this.tbXcoordC.TabIndex = 8;
+            // 
+            // tbYcoordC
+            // 
+            this.tbYcoordC.Location = new System.Drawing.Point(552, 280);
+            this.tbYcoordC.Name = "tbYcoordC";
+            this.tbYcoordC.Size = new System.Drawing.Size(100, 20);
+            this.tbYcoordC.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(449, 315);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "x coord Cirkel";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(449, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "y coord Cirkel";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tbYcoordC);
+            this.Controls.Add(this.tbXcoordC);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbYcoordRh);
             this.Controls.Add(this.btnMaakCirkel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbXcoord);
+            this.Controls.Add(this.tbXcoordRh);
             this.Controls.Add(this.btnMaakRechthoek);
             this.Controls.Add(this.Tekstvak);
             this.Controls.Add(this.Vlakje);
@@ -138,11 +203,18 @@
         private System.Windows.Forms.Button Knopje;
         private System.Windows.Forms.TextBox Tekstvak;
         private System.Windows.Forms.Button btnMaakRechthoek;
-        private System.Windows.Forms.TextBox tbXcoord;
+        private System.Windows.Forms.TextBox tbXcoordRh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnMaakCirkel;
+        private System.Windows.Forms.TextBox tbYcoordRh;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbXcoordC;
+        private System.Windows.Forms.TextBox tbYcoordC;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
