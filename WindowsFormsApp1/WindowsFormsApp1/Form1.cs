@@ -42,11 +42,10 @@ namespace WindowsFormsApp1
 
         private void btnMaakRechthoek_Click(object sender, EventArgs e)
         {
-            int x = Convert.ToInt32(tbXcoord.Text);
+            int x = Convert.ToInt32(this.tbXcoord.Text);
             //Nu een vaste plaats en kleur -> Aanpassen zodat dit gekozen kan worden
-            Rechthoek rh = new Rechthoek(x, 10, kleur);
+            Rechthoek rh = new Rechthoek(x, 10, kleur);           
             vormen.Add(rh);
-
             //Na het aanmaken van een nieuwe vorm: teken alles
             Tekenen();
             
@@ -66,6 +65,16 @@ namespace WindowsFormsApp1
         {
             colorDialog1.ShowDialog();
             kleur = colorDialog1.Color;
+        }
+
+        private void btnMaakCirkel_Click(object sender, EventArgs e)
+        {
+            // Nieuw object aanmaken Cirkel
+            Cirkel C = new Cirkel(50, 50, kleur);
+            // object Cirkel in vormen opnemen
+            vormen.Add(C);
+            // Na het aanmaken van een nieuwe vorm: teken alles
+            Tekenen();
         }
     }
 }

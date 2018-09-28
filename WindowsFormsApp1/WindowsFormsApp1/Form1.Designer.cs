@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnMaakCirkel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Vlakje
@@ -100,11 +101,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnMaakCirkel
+            // 
+            this.btnMaakCirkel.Location = new System.Drawing.Point(662, 283);
+            this.btnMaakCirkel.Name = "btnMaakCirkel";
+            this.btnMaakCirkel.Size = new System.Drawing.Size(123, 52);
+            this.btnMaakCirkel.TabIndex = 5;
+            this.btnMaakCirkel.Text = "Maak Cirkel";
+            this.btnMaakCirkel.UseVisualStyleBackColor = true;
+            this.btnMaakCirkel.Click += new System.EventHandler(this.btnMaakCirkel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMaakCirkel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbXcoord);
@@ -130,6 +142,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMaakCirkel;
     }
 }
 
