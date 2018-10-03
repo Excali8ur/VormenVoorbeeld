@@ -44,6 +44,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Vergroot = new System.Windows.Forms.Button();
+            this.Verklein = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Vlakje
@@ -170,11 +172,33 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "y coord Cirkel";
             // 
+            // Vergroot
+            // 
+            this.Vergroot.Location = new System.Drawing.Point(730, 244);
+            this.Vergroot.Name = "Vergroot";
+            this.Vergroot.Size = new System.Drawing.Size(55, 23);
+            this.Vergroot.TabIndex = 12;
+            this.Vergroot.Text = "Vergroot";
+            this.Vergroot.UseVisualStyleBackColor = true;
+            this.Vergroot.Click += new System.EventHandler(this.Vergroot_Click);
+            // 
+            // Verklein
+            // 
+            this.Verklein.Location = new System.Drawing.Point(662, 244);
+            this.Verklein.Name = "Verklein";
+            this.Verklein.Size = new System.Drawing.Size(62, 23);
+            this.Verklein.TabIndex = 13;
+            this.Verklein.Text = "Verklein";
+            this.Verklein.UseVisualStyleBackColor = true;
+            this.Verklein.Click += new System.EventHandler(this.Verklein_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Verklein);
+            this.Controls.Add(this.Vergroot);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbYcoordC);
@@ -215,6 +239,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Vergroot;
+        private System.Windows.Forms.Button Verklein;
     }
 }
 

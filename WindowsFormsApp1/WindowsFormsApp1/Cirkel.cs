@@ -9,28 +9,29 @@ namespace WindowsFormsApp1
 {
     public class Cirkel: Vorm
     {
-        public Cirkel(int x, int y, Color kleur) : base(x, y, kleur)
+        public Cirkel(int x, int y, int l, int b, Color kleur) : base(x, y, l, b, kleur)
         {
             x = 50;
             y = 50;
         }
         public override void Groeien()
         {
-            throw new NotImplementedException();
-            
+            xCoord += 100;
+            yCoord += 100;
         }
 
         public override void Krimpen()
         {
-            throw new NotImplementedException();
+            xCoord -= 100;
+            yCoord -= 100;
         }
 
         public override void Tekenen(Graphics papier)
         {
             SolidBrush SB = new SolidBrush(kleur);
             Pen p = new Pen(kleur);
-            papier.DrawEllipse(p, xCoord - 50, yCoord - 50, 100, 100);
-            papier.FillEllipse(SB, xCoord - 50, yCoord - 50, 100, 100);
+            papier.DrawEllipse(p, xCoord - 50, yCoord - 50, Lengte, Breedte);
+            papier.FillEllipse(SB, xCoord - 50, yCoord - 50, Lengte, Breedte);
            
         }
     }

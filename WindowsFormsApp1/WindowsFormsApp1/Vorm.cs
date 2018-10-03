@@ -15,11 +15,16 @@ namespace WindowsFormsApp1
         protected int xCoord;
         protected int yCoord;        
         protected bool isGeselecteerd;
+        protected int Lengte;
+        protected int Breedte;
+       
 
-        protected Vorm(int x, int y, Color kleur)
+        protected Vorm(int x, int y, int l, int b, Color kleur)
         {
             xCoord = x;
             yCoord = y;
+            Lengte = l;
+            Breedte = b;
             this.kleur = kleur;
         }
 
@@ -32,7 +37,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
-        public void Verplaats(int x, int y)
+        public void Verplaats(int x, int y, int l, int b)
         {
             throw new NotImplementedException();
         }

@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             vormen = new List<Vorm>();
 
-            papier = Vlakje.CreateGraphics();
+            papier = Vlakje.CreateGraphics();            
         }
 
         private void Knopje_Click(object sender, EventArgs e)
@@ -46,10 +46,10 @@ namespace WindowsFormsApp1
             int rhX = Convert.ToInt32(this.tbXcoordRh.Text);
             int rhY = Convert.ToInt32(this.tbYcoordRh.Text);
             //Nu een vaste plaats en kleur -> Aanpassen zodat dit gekozen kan worden
-            Rechthoek rh = new Rechthoek(rhX, rhY, kleur);           
+            Rechthoek rh = new Rechthoek(rhX, rhY, 100, 100, kleur);           
             vormen.Add(rh);
             //Na het aanmaken van een nieuwe vorm: teken alles
-            Tekenen();
+            Tekenen();            
             
             
         }
@@ -60,11 +60,11 @@ namespace WindowsFormsApp1
             int cX = Convert.ToInt32(this.tbXcoordC.Text);
             int cY = Convert.ToInt32(this.tbYcoordC.Text);
             // Nieuw object aanmaken Cirkel
-            Cirkel C = new Cirkel(cX, cY, kleur);
+            Cirkel C = new Cirkel(cX, cY, 100, 100, kleur);
             // object Cirkel in vormen opnemen
             vormen.Add(C);
             // Na het aanmaken van een nieuwe vorm: teken alles
-            Tekenen();
+            Tekenen();            
         }
 
         private void Tekenen()
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             
             foreach (Vorm v in vormen)
             {
-                v.Tekenen(papier);
+                v.Tekenen(papier);                
             }
         }
 
@@ -101,5 +101,37 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Verklein_Click(object sender, EventArgs e)
+        {
+            Vlakje.Invalidate();            
+            Krimpen();            
+        }
+
+        private void Vergroot_Click(object sender, EventArgs e)
+        {
+            Groeien();
+        }
+
+        private void Groeien()
+        {
+            foreach (Vorm g in vormen)
+            {
+                g.Groeien();
+                Tekenen();                
+            }
+
+        }
+
+        private void Krimpen()
+        {
+            foreach (Vorm k in vormen)
+            {                
+                k.Krimpen();
+                Tekenen();                
+            }
+
+        }
+
     }
 }
