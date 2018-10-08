@@ -50,6 +50,7 @@
             // 
             // Vlakje
             // 
+            this.Vlakje.AutoScroll = true;
             this.Vlakje.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Vlakje.Location = new System.Drawing.Point(18, 27);
             this.Vlakje.Name = "Vlakje";
@@ -90,7 +91,6 @@
             this.tbXcoordRh.Name = "tbXcoordRh";
             this.tbXcoordRh.Size = new System.Drawing.Size(100, 20);
             this.tbXcoordRh.TabIndex = 2;
-            this.tbXcoordRh.TextChanged += new System.EventHandler(this.tbXcoord_TextChanged);
             // 
             // label1
             // 
@@ -100,7 +100,6 @@
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "x coord Rechthoek";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -128,7 +127,6 @@
             this.tbYcoordRh.Name = "tbYcoordRh";
             this.tbYcoordRh.Size = new System.Drawing.Size(100, 20);
             this.tbYcoordRh.TabIndex = 6;
-            this.tbYcoordRh.TextChanged += new System.EventHandler(this.tbYcoord_TextChanged);
             // 
             // label2
             // 
@@ -138,7 +136,6 @@
             this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "y coord Rechthoek";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbXcoordC
             // 

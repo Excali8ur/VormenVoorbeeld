@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
 
         private void Tekenen()
         {
-            
+            papier.Clear(Color.White);
             foreach (Vorm v in vormen)
             {
                 v.Tekenen(papier);                
@@ -82,29 +82,8 @@ namespace WindowsFormsApp1
             kleur = colorDialog1.Color;
         }
 
-        private void tbXcoord_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbYcoord_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Verklein_Click(object sender, EventArgs e)
         {
-            Vlakje.Invalidate();            
             Krimpen();            
         }
 
@@ -125,6 +104,7 @@ namespace WindowsFormsApp1
 
         private void Krimpen()
         {
+
             foreach (Vorm k in vormen)
             {                
                 k.Krimpen();
